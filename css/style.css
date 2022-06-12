@@ -1,0 +1,104 @@
+/* Google fonts - poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background-color: #4070F4;
+}
+.nav {
+  background-color: #fff;  
+  border-radius: 12px;
+  padding: 0 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+/* ul */
+.nav-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  list-style: none;
+  
+}
+/* a */
+.link-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100px;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.25, -0.34, 0.2, 1.3);
+
+}
+.link-item.active {
+  transform: translateY(-10px);
+  ;
+}
+/* i */
+.link-icon {
+  font-size: 38px;
+  color: #999;
+  transition: all 0.5s cubic-bezier(0.25, -0.34, 0.2, 1.3);
+
+}
+.link-item.active .link-icon {
+  color: #4070F4;
+  
+}
+/* span */
+.link-text {
+  font-style: 12px;
+  color: #4070F4;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.5s cubic-bezier(0.25, -0.34, 0.2, 1.3);
+
+}
+.link-item.active .link-text {
+  opacity: 1;
+}
+
+.indicator {
+  position: absolute;
+  top: -14px;
+  left: 50px;;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border: 6px solid #4070F4;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s cubic-bezier(0.25, -0.34, 0.2, 1.3);
+}
+.indicator::before,
+.indicator::after {
+  content: '';
+  position: absolute;
+  width: 19px;
+  height: 24px;
+}
+.indicator::before {
+  left: -22px;
+  bottom: -8px;
+  border-top-right-radius: 30px;
+  box-shadow: 1px -13px #4070F4;
+}
+.indicator::after {
+  right: -22px;
+  bottom: -8px;
+  border-top-left-radius: 30px;
+  box-shadow: -1px -13px #4070F4;
+}
